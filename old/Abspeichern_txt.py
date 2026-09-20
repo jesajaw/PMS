@@ -1,9 +1,9 @@
 import psutil
 import time
-import cpu_monitoring as cpum
-import memory_monitoring as mm
-import disk_monitoring as dm
-import network_monitoring as nm
+import old.cpu_monitoring as cpum
+import old.memory_monitoring as mm
+import old.disk_monitoring as dm
+import old.network_monitoring as nm
 
 
 #Hauptüberwachungsfunktion mit eingabe(&Warnungen) in eine Datei

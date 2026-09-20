@@ -1,5 +1,5 @@
 import psutil
-import Warnungs_mail as wm
+import old.Warnungs_mail as wm
 
 #Schwellenwert definieren
 CRITICAL_CPU_THRESHOLD = 3.0 

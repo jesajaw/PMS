@@ -1,8 +1,8 @@
 import psutil
-import cpu_monitoring as cm 
-import memory_monitoring as mm
-import disk_monitoring as dm 
-import network_monitoring as nm 
+import old.cpu_monitoring as cm 
+import old.memory_monitoring as mm
+import old.disk_monitoring as dm 
+import old.network_monitoring as nm 
 
 
 import plotly.graph_objects as go 
