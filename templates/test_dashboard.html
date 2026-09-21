@@ -60,23 +60,41 @@
     </style>
 </head>
 <body>
+    <script>
+        async function refreshMetrics() { // polls the metrics API and updates the dashboard tiles
+            try {
+                const response = await fetch('/api/metrics');
+                const metrics = await response.json();
+
+                document.getElementById('cpu-usage').textContent = `${metrics.cpu_percent.toFixed(1)} %`;
+                document.getElementById('ram-usage').textContent = `${metrics.ram_percent.toFixed(1)} %`;
+                document.getElementById('disk-usage').textContent = `${metrics.disk_percent.toFixed(1)} %`;
+                document.getElementById('status-indicator').textContent = 'Status: Live';
+            } catch (error) {
+                document.getElementById('status-indicator').textContent = 'Status: Connection lost';
+            }
+        }
+
+        refreshMetrics();
+        setInterval(refreshMetrics, 3000);
+    </script>
     <div class="container">
         <header>
-            <h1>System Monitoring Dashboard</h1>
+            <h1>Python Monitoring System Dashboard</h1>
             <span id="status-indicator">Status: Live</span>
         </header>
 
         <main class="grid">
             <div class="card">
-                <h3>CPU Auslastung</h3>
+                <h3>CPU</h3>
                 <div class="metric-value" id="cpu-usage">-- %</div>
             </div>
             <div class="card">
-                <h3>Arbeitsspeicher (RAM)</h3>
+                <h3>RAM</h3>
                 <div class="metric-value" id="ram-usage">-- %</div>
             </div>
             <div class="card">
-                <h3>Festplattenspeicher</h3>
+                <h3>Primary Disk</h3>
                 <div class="metric-value" id="disk-usage">-- %</div>
             </div>
         </main>
