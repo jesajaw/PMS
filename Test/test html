@@ -1,9 +1,0 @@
-import plotly.graph_objects as go
-
-def test_plot():
-    fig = go.Figure([go.Bar(x=[1, 2, 3], y=[10, 11, 12])])
-    fig.write_html("test_plot.html")
-    print("HTML-Datei gespeichert!")
-
-if __name__ == '__main__':
-    test_plot()
