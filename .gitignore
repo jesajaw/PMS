@@ -1,8 +1,46 @@
+# =========================
+# Logs & Runtime Data
+# =========================
+*.log
+logs/
+*.sqlite
+*.sqlite3
+
+# =========================
+# Environment & Secrets
+# =========================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# =========================
+# System & OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# IDEs & Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Python
+# =========================
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-
 .venv/
 venv/
-env/
+
+# =========================
+# Node.js / Web
+# =========================
+node_modules/
+dist/
+build/
