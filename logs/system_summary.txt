@@ -1,2 +1,0 @@
-Monitoring Status: {'server_status': 'active', 'url': 'http://127.0.0.1:8080'}
-Payload: {'title': 'CPU_Load', 'theme': 'dark', 'data_points': [37.1], 'sample_count': 1}
