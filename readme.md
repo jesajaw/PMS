@@ -1,4 +1,3 @@
-# readme.md — vollständig
 # Python Monitoring System (PMS)
 
 A lightweight, modular Python system monitoring tool designed to collect real-time hardware metrics (CPU, RAM, Disk), generate evaluations, export log files, and serve a web interface.
